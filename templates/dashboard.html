@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+{% if user.is_staff %}
+<a href="{% url 'addevent' %}">+ event</a>
+{% endif %}
+
+{% for event in events_list %}
+<ul>
+    <li>
+
+        {{ event.description }}
+    </li>
+</ul>
+<table>
+    <tr>
+        <td>
+            {{ event.name }}
+            
+        </td>
+    </tr>
+</table>
+{% endfor %}
+
+{% endblock %}
