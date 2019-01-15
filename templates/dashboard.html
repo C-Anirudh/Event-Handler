@@ -4,21 +4,29 @@
 
 {% block content %}
 {% if user.is_staff %}
-<a href="{% url 'addevent' %}">+ event</a>
+<a href="{% url 'admin_interface' %}">Admin Home Page</a>
 {% endif %}
 
 {% for event in events_list %}
-<ul>
-    <li>
-
-        {{ event.description }}
-    </li>
-</ul>
-<table>
+<table border="2">
     <tr>
         <td>
             {{ event.name }}
-            
+        </td>
+        <td>
+            {{ event.description }}
+        </td>
+        <td>
+            {{ event.venue }}
+        </td>
+        <td>
+            {{ event.event_date }}
+        </td>
+        <td>
+            {{ event.fee }}
+        </td>
+        <td>
+            {{ event.last_date }}
         </td>
     </tr>
 </table>

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}Administrator{% endblock %}
+
+{% block content %}
+<h1>Hello, Administrator</h1>
+Show<a href="{% url 'dashboard' %}"> Dashboard</a><br>
+<a href="{% url 'addevent' %}">+ Event</a>
+{% endblock content %}

@@ -7,10 +7,14 @@
 {% if user.is_authenticated %}
 
 {% else %}
-<div>
-    <p>You are not logged in</p>
-    <a href="{% url 'login' %}">login</a> |
-    <a href="{% url 'signup' %}">signup</a>
-</div>
+<center>
+    <div class="Logg">
+        <a href="{% url 'login' %}">Login</a>
+    </div>
+
+    <div class="Signn">
+        <a href="{% url 'signup' %}">SignUp</a>
+    </div>
+</center>
 {% endif %}
 {% endblock %}

@@ -1,6 +1,16 @@
-from django.views.generic import ListView, TemplateView
+from django.views.generic import TemplateView, CreateView, ListView
+from .models import EventDetails
 from django.contrib.auth.mixins import LoginRequiredMixin
-from accounts.models import EventDetails
+
+
+class AdminInterface(TemplateView):
+    template_name = 'administrator.html'
+
+
+class AddEventView(CreateView):
+    model = EventDetails
+    template_name = 'add_event.html'
+    fields = '__all__'
 
 
 class DashboardView(LoginRequiredMixin, ListView):
