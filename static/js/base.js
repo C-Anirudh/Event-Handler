@@ -13,3 +13,7 @@ function goToEventRegister() {
 function goToViewParticipants() {
     window.location.href = 'http://127.0.0.1:8000/event_participants/';
 }
+
+function certify() {
+    window.location.href = 'http://127.0.0.1:8000/certificate.html/';
+}

@@ -1,12 +1,17 @@
 {% extends 'base2.html' %}
 
+
 {% block title %}Add Events{% endblock %}
 
 {% block content %}
-<h1>Add Event</h1>
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">ADD</button>
-</form>
+<center>
+    <div class="newevent">
+        <h1><b>Add Event</b></h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">ADD</button>
+        </form>
+    </div>
+</center>
 {% endblock %}

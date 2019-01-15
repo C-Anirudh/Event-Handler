@@ -1,6 +1,7 @@
 from django.views.generic import TemplateView, CreateView, ListView, DetailView, DeleteView
 from .models import EventDetails, SuggestedEvents, Registrants
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.urls import reverse_lazy
 
 
 class AdminInterface(TemplateView):

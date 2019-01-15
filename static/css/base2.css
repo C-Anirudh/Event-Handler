@@ -86,6 +86,76 @@
 		padding: 75px 40px 40px 40px;
 		height: 200px;
 		border: 1px solid black; 	
-		margin-top: 300px;
-		margin-left: 900px;
+		margin-top: 250px;
+		margin-left: 830px;	
 	}
+	.fb
+	{
+		background-color: rgb(84, 84, 226);
+		width: 20px;
+		height: 20px;
+		border: 2px solid black;
+		border-radius: 3px 3px 3px 3px;
+	}
+	.i
+	{
+		background-color: rgb(243, 40, 148);
+		width: 20px;
+		height: 20px;
+		border: 2px solid black;
+		border-radius: 3px 3px 3px 3px;
+	}
+	.fa {
+		padding: 20px;
+		font-size: 30px;
+		width: 50px;
+		text-align: center;
+		text-decoration: none;
+		border-radius: 50%;
+	  }
+	  
+	  /* Add a hover effect if you want */
+	  .fa:hover {
+		opacity: 0.7;
+	  }
+	  
+	  /* Set a specific color for each brand */
+	  
+	  /* Facebook */
+	  .fa-facebook {
+		background: #3B5998;
+		color: white;
+	  }
+	  
+	  /* Twitter */
+	  .fa-twitter {
+		background: #55ACEE;
+		color: white;
+	  }
+	  .fa-instagram {
+		background: #ea4c89;
+		color: white;
+	  }
+	  .newevent 
+	  .suggestions
+	  {
+		  width: 600px;
+		  height: 200px;
+		  border: 1px solid black;	
+		  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, .5);
+		  margin-top: 110px;
+		  border-radius: 90px 90px 90px 90px;
+		  color: black;
+		  font-size: 20px;
+	  }
+	  .event-entry
+	  {
+		  width: 600px;
+		  height: 300px;
+		  border: 1px solid black;	
+		  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, .5);
+		  margin-top: 110px;
+		  border-radius: 90px 0px 90px 0px;
+		  color: black;
+		  font-size: 20px;
+	  }

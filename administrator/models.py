@@ -27,6 +27,9 @@ class SuggestedEvents(models.Model):
     def get_absolute_url(self):
         return reverse('dashboard')
 
+    def __str__(self):
+        return self.name
+
 
 class Registrants(models.Model):
     event = models.ForeignKey(

@@ -3,9 +3,11 @@
 {% block title %}Suggested Event Detail{% endblock %}
 
 {% block content %}
-<div class="event-entry">
-    <h2>{{ object.name }}</h2>
-    <p>{{ object.description }}</p>
-    <p>Feasible Event Date : {{ object.feasible_event_date }}</p>
-</div>
+<center>
+    <div class="suggestions">
+        <h2><b>{{ object.name }}</b></h2>
+        <p>{{ object.description }}</p>
+        <p>Feasible Event Date : {{ object.feasible_event_date }}</p>
+    </div>
+</center>
 {% endblock content %}
