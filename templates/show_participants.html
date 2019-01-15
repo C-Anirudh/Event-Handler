@@ -2,13 +2,17 @@
 
 {% block title %}Participants{% endblock %}
 
+
 {% block content %}
+<br><br>
 {% for m in members %}
-
-{{ m.event }} :
-{{ m.roll }}
-<button type="button" onclick="certify()" class="btn btn-success">Certify</button>
-<br>
-
+<center>
+    <div class="boxer">
+        {{ m.event }} :
+        {{ m.roll }}
+        <button type="button" onclick="certificate()" class="btn btn-success">Certify</button><br>
+        <br>
+    </div>
+</center>
 {% endfor %}
 {% endblock content %}

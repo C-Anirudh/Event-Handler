@@ -8,4 +8,6 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     path('', include('administrator.urls')),
     path('polls/', include('polls.urls')),
+    path('certificate/', TemplateView.as_view(template_name='certificate.html'),
+         name='certificate'),
 ]
