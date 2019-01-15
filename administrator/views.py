@@ -1,5 +1,5 @@
 from django.views.generic import TemplateView, CreateView, ListView, DetailView
-from .models import EventDetails, SuggestedEvents
+from .models import EventDetails, SuggestedEvents, Registrants
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 
@@ -46,3 +46,9 @@ class SuggestedEventListView(ListView):
 class SuggestedEventDetailView(DetailView):
     model = SuggestedEvents
     template_name = 'suggested_event_detail.html'
+
+
+class EventRegistrationView(CreateView):
+    model = Registrants
+    fields = '__all__'
+    template_name = 'event_register.html'

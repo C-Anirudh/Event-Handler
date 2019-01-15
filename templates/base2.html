@@ -1,4 +1,4 @@
-{% load static %}
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
 
@@ -11,10 +11,18 @@
 
 <body>
     <main>
-        <div align="right">
+        <div>
             {% if user.is_authenticated %}
-            Hi <b>{{ user.username }}!</b>
-            <a href="{% url 'logout' %}">logout</a>
+            <center>
+                <div class="banner">
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;
+                    <b>Amrita Event Handler</b>
+                    <div class="UserLog">
+                        Hi <b>{{ user.username }}!</b>
+                        <a href="{% url 'logout' %}">logout&emsp;</a>
+                    </div>
+                </div>
+            </center>
             {% endif %}
         </div>
         {% block content %}

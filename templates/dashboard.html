@@ -1,32 +1,34 @@
-{% extends 'base.html' %}
+<div class="BigBox">
+    {% extends 'base2.html' %}
 
-{% block title %}Dashboard{% endblock %}
+    {% block title %}Dashboard{% endblock %}
 
 
-{% block content %}
-<center>
-    <div class="nav">
-        <ul>
-            {% if user.is_staff %}
-            <li><a href="{% url 'admin_interface' %}"><b>Admin</b></a></li>
-            <li><a href="{% url 'admin_interface' %}"><b>Create an Event</b></a></li>
-            <li><a href=""><b>Polling Booth</b></a></li>
-            <li><a href="{% url 'suggestedEventList' %}"><b>Suggestion List</b></a></li>
-            {% else %}
-            <li><a href="{% url 'suggestevent' %}"><b>Suggest an Event</b></a></li>
-            <li><a href=""><b>Polling Booth</b></a></li>
-            {% endif %}
-    </div>
-</center>
+    {% block content %}
+    <center>
+        <div class="nav">
+            <ul>
+                {% if user.is_staff %}
+                <li><a href="{% url 'admin_interface' %}"><b>Admin</b></a></li>
+                <li><a href="{% url 'admin_interface' %}"><b>Create an Event</b></a></li>
+                <li><a href=""><b>Polling Booth</b></a></li>
+                <li><a href="{% url 'suggestedEventList' %}"><b>Suggestion List</b></a></li>
+                {% else %}
+                <li><a href="{% url 'suggestevent' %}"><b>Suggest an Event</b></a></li>
+                <li><a href=""><b>Polling Booth</b></a></li>
+                {% endif %}
+        </div>
+    </center>
 
-{% for event in events_list %}
-<center>
-    <div class="events" align="left">
-        <a class="Heading" href="{% url 'event_detail' event.pk %}">{{ event.name }}</a><br>
-        {{ event.event_date }}
-</center>
+    {% for event in events_list %}
+    <center>
+        <div class="events" align="left">
+            <a class="Heading" href="{% url 'event_detail' event.pk %}">{{ event.name }}</a><br>
+            {{ event.event_date }}
+    </center>
 </div>
 {% endfor %}
 
 
 {% endblock %}
+</div>

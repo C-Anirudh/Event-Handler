@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base2.html' %}
 
 {% block title %}Event Detail{% endblock %}
 
@@ -9,5 +9,7 @@
     <p>Fee : Rs. {{ object.fee }}</p>
     <p>Event Date : {{ object.event_date }}</p>
     <p>Venue : {{ object.venue }}</p>
+
+    <button type="button" onclick="goToEventRegister()" class="btn btn-success">Register</button>
 </div>
 {% endblock content %}

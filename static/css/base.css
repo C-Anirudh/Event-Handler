@@ -2,18 +2,19 @@
 	{
   	width: 500px;
   	margin-top: 250px;
-  	margin-right: 100px;
+  	margin-right: 200px;
   	height: 350px;
   	font-family: "";
   	border: 1px solid black;
   	color: #8800cc;
-  	opacity: .65;
+  	opacity: .85;
   	border-radius: 90px 90px 90px 90px;
   	background-color: white;
   	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	float: right;
 	font-size: 19px;
 	}
+
 	input[type=text]
 	{
   	border: 2px solid #8800cc;
@@ -38,7 +39,7 @@
   	color: white;
   	padding: 2px;
   	border-radius: 20px;
-  	margin-top: 65px;
+  	margin-top: 40px;
   	border: none;
   	background-color: #8800cc;
 	}
@@ -48,23 +49,33 @@
 	}
 	.Logg
 	{
-		width: 100px;
-		height: 40px;
-		border: 1px solid black;
-		opacity: 1;
-		margin-top: 550px;
-		margin-right: 80px;
-		padding-top: 7px;
-	}
 
+		font-size: 22px;
+		background-color: #000;
+		opacity: .5;
+		padding: 15px 15px 15px 15px;
+		width: 300px;
+		height: 70px;
+		border: 1px solid black;
+		margin-top: 400px;
+		margin-left: 700px;
+	}
+	.Logg:hover,.Signn:hover
+	{
+		background-color: white;
+	}
 	.Signn
 	{
-		width: 100px;
-		height: 40px;
+		font-size: 22px;
+		background-color: #000;
+		padding: 15px 15px 15px 15px;
+		color: white;	
+		width: 300px;
+		height: 70px;
 		border: 1px solid black;
-		opacity: 1;
-		margin-left: 118px;
-		padding-top: 7px;
+		opacity: .5;
+		margin-left: 700px;
+		margin-top: 10px;
 	}
 	.banner
 	{
@@ -75,6 +86,7 @@
 		margin-top: 20px;	
 		height: 60px;
 		font-size: 26px;
+		opacity: .8;
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	}
 	.UserLog
@@ -148,4 +160,10 @@
 		border: 1px solid black; 	
 		margin-top: 300px;
 		margin-left: 900px;
+	}
+	.loader
+	{
+		background-image: url("/static/images/ground.jpg");
+		background-repeat: no-repeat;
+	
 	}
