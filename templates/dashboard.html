@@ -10,11 +10,11 @@
             {% if user.is_staff %}
             <li><a href="{% url 'admin_interface' %}"><b>Admin</b></a></li>
             <li><a href="{% url 'admin_interface' %}"><b>Create an Event</b></a></li>
-            <li><a href="{% url 'admin_interface' %}"><b>Polling Booth</b></a></li>
+            <li><a href=""><b>Polling Booth</b></a></li>
             <li><a href="{% url 'suggestedEventList' %}"><b>Suggestion List</b></a></li>
             {% else %}
             <li><a href="{% url 'suggestevent' %}"><b>Suggest an Event</b></a></li>
-            <li><a href="{% url 'admin_interface' %}"><b>Polling Booth</b></a></li>
+            <li><a href=""><b>Polling Booth</b></a></li>
             {% endif %}
     </div>
 </center>
