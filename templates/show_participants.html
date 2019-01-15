@@ -1,0 +1,13 @@
+{% extends 'base2.html' %}
+
+{% block title %}Participants{% endblock %}
+
+{% block content %}
+{% for m in members %}
+
+{{ m.event }} :
+{{ m.roll }}
+<br>
+
+{% endfor %}
+{% endblock content %}

@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import AddEventView, AdminInterface, HomePageView, DashboardView, EventDetailView, SuggestEventView, SuggestedEventListView, SuggestedEventDetailView, EventRegistrationView
+from .views import AddEventView, AdminInterface, HomePageView, DashboardView, EventDetailView, SuggestEventView, SuggestedEventListView, SuggestedEventDetailView, EventRegistrationView, EventParticipantsView, EventDeleteView
 from django.contrib.auth.decorators import permission_required
 
 urlpatterns = [
@@ -9,6 +9,7 @@ urlpatterns = [
     path('event_register/', EventRegistrationView.as_view(), name='event_register'),
     path('suggested_event/<int:pk>/', permission_required('is_staff')(SuggestedEventDetailView.as_view()),
          name='suggested_event_detail'),
+    path('event/delete/',EventDeleteView.as_view(),name='event_delete'),
     path('event/suggest/', SuggestEventView.as_view(), name='suggestevent'),
     path('event/suggested/', permission_required('is_staff')(SuggestedEventListView.as_view()),
          name='suggestedEventList'),
@@ -16,4 +17,6 @@ urlpatterns = [
          (AddEventView.as_view()), name='addevent'),
     path('admin_interface/', permission_required('is_staff')
          (AdminInterface.as_view()), name='admin_interface'),
+    path('event_participants/', permission_required('is_staff')(EventParticipantsView.as_view()),
+         name='eventParticipants'),
 ]

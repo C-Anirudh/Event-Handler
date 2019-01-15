@@ -9,7 +9,6 @@
         <div class="nav">
             <ul>
                 {% if user.is_staff %}
-                <li><a href="{% url 'admin_interface' %}"><b>Admin</b></a></li>
                 <li><a href="{% url 'admin_interface' %}"><b>Create an Event</b></a></li>
                 <li><a href=""><b>Polling Booth</b></a></li>
                 <li><a href="{% url 'suggestedEventList' %}"><b>Suggestion List</b></a></li>

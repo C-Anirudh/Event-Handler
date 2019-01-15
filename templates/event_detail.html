@@ -10,6 +10,11 @@
     <p>Event Date : {{ object.event_date }}</p>
     <p>Venue : {{ object.venue }}</p>
 
+    {% if user.is_staff %}
+    <button type="button" onclick="goToViewParticipants()" class="btn btn-success">View Participants</button>
+    <p><a href="{% url 'event_delete' object.pk %}">+ Delete Blog Post</a></p>
+    {% else %}
     <button type="button" onclick="goToEventRegister()" class="btn btn-success">Register</button>
+    {% endif %}
 </div>
 {% endblock content %}

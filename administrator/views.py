@@ -1,4 +1,4 @@
-from django.views.generic import TemplateView, CreateView, ListView, DetailView
+from django.views.generic import TemplateView, CreateView, ListView, DetailView, DeleteView
 from .models import EventDetails, SuggestedEvents, Registrants
 from django.contrib.auth.mixins import LoginRequiredMixin
 
@@ -52,3 +52,15 @@ class EventRegistrationView(CreateView):
     model = Registrants
     fields = '__all__'
     template_name = 'event_register.html'
+
+
+class EventParticipantsView(ListView):
+    model = Registrants
+    template_name = 'show_participants.html'
+    context_object_name = 'members'
+
+
+class EventDeleteView(DeleteView):
+    model = EventDetails
+    template_name = 'event_delete.html'
+    success_url = reverse_lazy('dashboard')
