@@ -41,3 +41,8 @@ class SuggestedEventListView(ListView):
     model = SuggestedEvents
     template_name = 'suggested_event_list.html'
     context_object_name = 'suggested_events_list'
+
+
+class SuggestedEventDetailView(DetailView):
+    model = SuggestedEvents
+    template_name = 'suggested_event_detail.html'
