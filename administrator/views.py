@@ -1,4 +1,4 @@
-from django.views.generic import TemplateView, CreateView, ListView
+from django.views.generic import TemplateView, CreateView, ListView, DetailView
 from .models import EventDetails
 from django.contrib.auth.mixins import LoginRequiredMixin
 
@@ -22,3 +22,8 @@ class DashboardView(LoginRequiredMixin, ListView):
 
 class HomePageView(TemplateView):
     template_name = 'home.html'
+
+
+class EventDetailView(DetailView):
+    model = EventDetails
+    template_name = 'event_detail.html'

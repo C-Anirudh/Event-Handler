@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Event Detail{% endblock %}
+
+{% block content %}
+<div class="event-entry">
+    <h2>{{ object.name }}</h2>
+    <p>{{ object.description }}</p>
+    <p>Fee : Rs. {{ object.fee }}</p>
+    <p>Event Date : {{ object.event_date }}</p>
+    <p>Venue : {{ object.venue }}</p>
+</div>
+{% endblock content %}

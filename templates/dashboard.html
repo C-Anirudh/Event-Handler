@@ -2,34 +2,27 @@
 
 {% block title %}Dashboard{% endblock %}
 
+
 {% block content %}
-{% if user.is_staff %}
-<a href="{% url 'admin_interface' %}">Admin Home Page</a>
-{% endif %}
+<center>
+    <div class="nav">
+        <ul>
+            {% if user.is_staff %}
+            <li><a href="{% url 'admin_interface' %}"><b>Admin</b></a></li>
+            {% endif %}
+            <li><a href="{% url 'admin_interface' %}"><b>Create a Event</b></a></li>
+            <li><a href="{% url 'admin_interface' %}"><b>Polling Booth</b></a></li>
+    </div>
+</center>
 
 {% for event in events_list %}
-<table border="2">
-    <tr>
-        <td>
-            {{ event.name }}
-        </td>
-        <td>
-            {{ event.description }}
-        </td>
-        <td>
-            {{ event.venue }}
-        </td>
-        <td>
-            {{ event.event_date }}
-        </td>
-        <td>
-            {{ event.fee }}
-        </td>
-        <td>
-            {{ event.last_date }}
-        </td>
-    </tr>
-</table>
+<center>
+    <div class="events" align="left">
+        <a class="Heading" href="{% url 'event_detail' event.pk %}">{{ event.name }}</a><br>
+        {{ event.event_date }}
+</center>
+</div>
 {% endfor %}
+
 
 {% endblock %}

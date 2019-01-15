@@ -3,7 +3,10 @@
 {% block title %}Administrator{% endblock %}
 
 {% block content %}
-<h1>Hello, Administrator</h1>
-Show<a href="{% url 'dashboard' %}"> Dashboard</a><br>
+<div class="Highlight">
+    <h1>Hello, Administrator</h1>
+</div>
+<div class="adAdd">
 <a href="{% url 'addevent' %}">+ Event</a>
+</div>
 {% endblock content %}

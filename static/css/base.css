@@ -1,9 +1,9 @@
 .contain
 	{
-  	width: 400px;
-  	margin-top: 100px;
+  	width: 500px;
+  	margin-top: 250px;
   	margin-right: 100px;
-  	height: 300px;
+  	height: 350px;
   	font-family: "";
   	border: 1px solid black;
   	color: #8800cc;
@@ -11,12 +11,13 @@
   	border-radius: 90px 90px 90px 90px;
   	background-color: white;
   	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  	float: right;
+	float: right;
+	font-size: 19px;
 	}
 	input[type=text]
 	{
   	border: 2px solid #8800cc;
-  	width: 65%;
+  	width: 55%;
   	padding: 12px 20px;
   	margin: 8px 0;
   	margin-top: 70px;
@@ -25,7 +26,7 @@
 	input[type=password]
 	{
   	border: 2px solid #8800cc;
-  	width: 65%;
+  	width: 55%;
   	padding: 12px 20px;
   	margin: 8px 0;
   	box-sizing: border-box;
@@ -37,7 +38,7 @@
   	color: white;
   	padding: 2px;
   	border-radius: 20px;
-  	margin-top: 30px;
+  	margin-top: 65px;
   	border: none;
   	background-color: #8800cc;
 	}
@@ -51,7 +52,7 @@
 		height: 40px;
 		border: 1px solid black;
 		opacity: 1;
-		margin-top: 450px;
+		margin-top: 550px;
 		margin-right: 80px;
 		padding-top: 7px;
 	}
@@ -65,4 +66,86 @@
 		margin-left: 118px;
 		padding-top: 7px;
 	}
-
+	.banner
+	{
+		border: 3px solid black;
+		padding-top: 10px;
+		text-align: center;
+		width: 95%;
+		margin-top: 20px;	
+		height: 60px;
+		font-size: 26px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+	.UserLog
+	{
+		float: right;
+	}
+	.nav
+	{
+		margin-top: 10px;
+		width: 95%;
+		font-size: 24px;
+	}
+	ul
+	{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden; 
+		background-color: #333;
+	}
+	li
+	{
+		float: left;
+	}
+	li a
+	{
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+	li a:hover
+	{
+		background-color: #111;
+		color: white;
+	}
+	.events
+	{
+		width: 75%;
+		height: 11	0px;
+		margin-top: 20px;
+		border: 1px solid black;
+		padding: 15px 15px 15px 15px;
+	}
+	.events:hover
+	{
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, .5);
+		background-color: #000;
+	}
+	.Heading
+	{
+		font-size: 40px;
+	}
+	.Highlight
+	{
+		width: 280px;
+		height: 105px;
+		background-color: #000;
+		color: white;
+		margin-left: 47px;
+		margin-top: 10px;
+		padding: 7px 7px 7px 7px;
+	}
+	.adAdd
+	{
+		width: 200px;
+		font-size: 30px;
+		padding: 75px 40px 40px 40px;
+		height: 200px;
+		border: 1px solid black; 	
+		margin-top: 300px;
+		margin-left: 900px;
+	}
