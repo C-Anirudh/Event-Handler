@@ -1,0 +1,13 @@
+{% extends 'base2.html' %}
+
+{% block title %}Suggest Event{% endblock %}
+
+{% block content %}
+<h1>Suggest an Event</h1>
+<p>Enter a clear and succint draft of the event.</p>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">submit</button>
+</form>
+{% endblock content %}

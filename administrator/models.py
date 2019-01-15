@@ -12,4 +12,13 @@ class EventDetails(models.Model):
     last_date = models.DateTimeField(default=timezone.now())
 
     def get_absolute_url(self):
-        return reverse('addevent')
+        return reverse('dashboard')
+
+
+class SuggestedEvents(models.Model):
+    name = models.CharField(max_length=200)
+    description = models.TextField()
+    feasible_event_date = models.DateTimeField(default=timezone.now())
+
+    def get_absolute_url(self):
+        return reverse('dashboard')

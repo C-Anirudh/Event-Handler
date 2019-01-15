@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Suggested Events{% endblock %}
+
+
+{% block content %}
+
+{% for event in suggested_events_list %}
+<center>
+    <div class="events" align="left">
+        <a class="Heading" href="{% url 'event_detail' event.pk %}">{{ event.name }}</a><br>
+        {{ event.feasible_event_date }}
+</center>
+</div>
+{% endfor %}
+
+
+{% endblock %}
